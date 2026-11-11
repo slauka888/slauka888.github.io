@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  
+  <meta name="robots" content="index,follow">
+  
+  <meta name="description" content="Fix a download that won&#39;t start, quality below the plan, missing audio, a slow export or a license error — check the likely causes in order.">
+  <link rel="canonical" href="https://slauka888.github.io/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="en" href="https://slauka888.github.io/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="ru" href="https://slauka888.github.io/ru/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="de" href="https://slauka888.github.io/de/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="es" href="https://slauka888.github.io/es/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="zh" href="https://slauka888.github.io/zh/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="fr" href="https://slauka888.github.io/fr/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="ja" href="https://slauka888.github.io/ja/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="x-default" href="https://slauka888.github.io/guides/troubleshoot-common-problems">
+  
+  <meta property="og:title" content="Kacher download not working: common problems and fixes · Kacher">
+  <meta property="og:description" content="Fix a download that won&#39;t start, quality below the plan, missing audio, a slow export or a license error — check the likely causes in order.">
+  <meta property="og:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slauka888.github.io/guides/troubleshoot-common-problems">
+  <meta property="og:site_name" content="Kacher">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="ja_JP"><meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kacher download not working: common problems and fixes · Kacher">
+  <meta name="twitter:description" content="Fix a download that won&#39;t start, quality below the plan, missing audio, a slow export or a license error — check the likely causes in order.">
+  <meta name="twitter:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <title>Kacher download not working: common problems and fixes · Kacher</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Kacher download not working: common problems and fixes","description":"Fix a download that won't start, quality below the plan, missing audio, a slow export or a license error — check the likely causes in order.","author":{"@type":"Organization","name":"Kacher","url":"https://slauka888.github.io"},"publisher":{"@type":"Organization","name":"Kacher","logo":{"@type":"ImageObject","url":"https://slauka888.github.io/static/brand/kacher-512.png?v=4afe9c90d845"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://slauka888.github.io/guides/troubleshoot-common-problems"},"datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"en","image":"https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kacher","item":"https://slauka888.github.io/"},{"@type":"ListItem","position":2,"name":"Kacher download not working: common problems and fixes","item":"https://slauka888.github.io/guides/troubleshoot-common-problems"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What should I do with a 403 or 'not found'?","acceptedAnswer":{"@type":"Answer","text":"Refresh cookies, update yt-dlp/FFmpeg and re-analyze. If it persists, the source may not be public or may not be saveable."}},{"@type":"Question","name":"Why is there no audio?","acceptedAnswer":{"@type":"Answer","text":"Often a video-only format was chosen. Switch container or codec and choose a format with an audio track."}},{"@type":"Question","name":"Why is the export slow?","acceptedAnswer":{"@type":"Answer","text":"GPU encoder, resolution, codec and bitrate all affect speed. Check the GPU, use Auto and test one short file."}}]}]}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/brand/kacher-32.png?v=74e2ca483221">
+  <link rel="apple-touch-icon" href="/static/brand/kacher-180.png?v=43005ce2af05">
+  <link rel="stylesheet" href="/static/site.css?v=5d103f4e8378">
+</head>
+<body data-surface="guide" data-cache-version="dfa2a95a28eb" data-sw-update-text="A fresh version of Kacher is ready. Refresh when convenient.">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Kacher">
+      <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="38" height="38">
+      <span>Kacher</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/download">Download</a>
+      <a href="/help/desktop-login">Help</a>
+    </nav>
+    <div class="header-actions">
+      <div class="desktop-locale"><nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/troubleshoot-common-problems'>RU</a><a href='/guides/troubleshoot-common-problems?lang=en' aria-current='true'>EN</a><a href='/de/guides/troubleshoot-common-problems'>DE</a><a href='/es/guides/troubleshoot-common-problems'>ES</a><a href='/fr/guides/troubleshoot-common-problems'>FR</a><a href='/ja/guides/troubleshoot-common-problems'>日本語</a><a href='/zh/guides/troubleshoot-common-problems'>中文</a></nav></div>
+      
+        <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">Sign in</a>
+      
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="Menu">
+        <span aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <nav aria-label="Main navigation">
+          <a href="/#features">Features</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/download">Download</a>
+          <a href="/help/desktop-login">Help</a>
+        </nav>
+        <nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/troubleshoot-common-problems'>RU</a><a href='/guides/troubleshoot-common-problems?lang=en' aria-current='true'>EN</a><a href='/de/guides/troubleshoot-common-problems'>DE</a><a href='/es/guides/troubleshoot-common-problems'>ES</a><a href='/fr/guides/troubleshoot-common-problems'>FR</a><a href='/ja/guides/troubleshoot-common-problems'>日本語</a><a href='/zh/guides/troubleshoot-common-problems'>中文</a></nav>
+        
+          <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">Sign in</a>
+        
+      </div>
+    </details>
+  </header>
+
+  
+
+  <main id="main">
+    
+<section class="section guide-page">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Kacher</a>
+    <span aria-hidden="true">/</span>
+    <a href="/help/plans-limits">Help</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Kacher download not working: common problems and fixes</span>
+  </nav>
+  <div class="guide-layout">
+    <article class="guide-article">
+      <span class="eyebrow">Troubleshooting</span>
+      <h1>Kacher download not working: common problems and fixes</h1>
+      <p class="guide-lead">Start with the most likely causes in this order: file and format, account or cookies, connection and proxy, then performance. Stop after the first real fix — you do not need to change everything.</p><p class="guide-lead">Kacher does not bypass DRM or access restrictions. If a source is not public or cannot be saved, use an exported or permitted download.</p>
+      <ol class="guide-steps">
+        
+          <li>
+            <h2>Separate the symptom</h2>
+            <p>No format list, &#39;not found&#39;, blocked quality, missing audio, a slow export and a license error are different branches. Do not reinstall everything at once.</p>
+          </li>
+        
+          <li>
+            <h2>Check the link and format</h2>
+            <p>Open the page yourself and confirm it loaded. If analysis says &#39;not found&#39; or &#39;no suitable formats&#39;, use the canonical page address, not an internal CDN/HLS address. Direct stream recording is only for confirmed live sources.</p>
+          </li>
+        
+          <li>
+            <h2>Check cookies, yt-dlp and destination</h2>
+            <p>If cookies expired, refresh them through the extension. For 403 or missing formats, update yt-dlp and FFmpeg first, then re-analyze. Kacher marks a task done only when a real output file exists.</p>
+          </li>
+        
+          <li>
+            <h2>Check connection and proxy</h2>
+            <p>For transport errors, open Settings → Proxy and use Test all or Blitz. Check that the active proxy is alive. If direct connection also fails, the site may be blocked by your provider.</p>
+          </li>
+        
+          <li>
+            <h2>Separate plan, quality, audio and speed</h2>
+            <p>If a format is blocked by the tariff, lower the quality. If only the audio is missing, switch container or codec and choose a format with a combined audio track. If the export is slow, use Auto GPU or CPU and check the bitrate profile and resolution.</p>
+          </li>
+        
+          <li>
+            <h2>Keep failure evidence</h2>
+            <p>Save the visible error, plan and version, plus the log from the Kacher logs folder. Never send passwords, private keys or full payment credentials.</p>
+          </li>
+        
+      </ol>
+      <div class="guide-checks">
+        <h2>What to check before you call it done</h2>
+        <ul>
+          <li>The page opens by itself.</li><li>The chosen quality is within the plan limit.</li><li>The output file exists and is not a .part file.</li><li>The source and save permission are clear.</li>
+        </ul>
+      </div>
+      <div class="guide-faq">
+        <h2>Questions before you install</h2>
+        
+          <details><summary>What should I do with a 403 or &#39;not found&#39;?</summary><p>Refresh cookies, update yt-dlp/FFmpeg and re-analyze. If it persists, the source may not be public or may not be saveable.</p></details>
+        
+          <details><summary>Why is there no audio?</summary><p>Often a video-only format was chosen. Switch container or codec and choose a format with an audio track.</p></details>
+        
+          <details><summary>Why is the export slow?</summary><p>GPU encoder, resolution, codec and bitrate all affect speed. Check the GPU, use Auto and test one short file.</p></details>
+        
+      </div>
+      <div class="guide-cta">
+        <a class="button button-primary" href="/download" data-track="download_clicked">Download installer</a>
+        <a class="button button-secondary" href="/help/plans-limits">Plan limits</a>
+      </div>
+    </article>
+    <aside class="guide-related">
+      <h2>Related guides</h2>
+      
+        <a class="guide-card" href="/guides/save-your-own-video">
+          <span>You own it — save it</span>
+          <strong>How to save your own video or channel</strong>
+          <small>Save videos from your own channel or archive your own content with Kacher: paste the page, choose the format, and keep the verified file on your PC.</small>
+        </a>
+      
+        <a class="guide-card" href="/guides/record-live-stream">
+          <span>Live recording</span>
+          <strong>How to record your own live stream or webinar</strong>
+          <small>Record a confirmed live stream or webinar in Kacher: start from the live page, keep the partial recording available, and check the plan&#39;s stream minutes first.</small>
+        </a>
+      
+        <a class="guide-card" href="/guides/choose-mp4-mkv-codecs">
+          <span>Batch transcode</span>
+          <strong>MP4, MKV, H.264, HEVC, AV1 and remux: choosing output settings</strong>
+          <small>Choose an output that plays where you need it: MP4 for compatibility, MKV for flexibility, H.264/HEVC/AV1 and remux in Kacher batch transcode.</small>
+        </a>
+      
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand brand-footer" href="/">
+        <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="34" height="34">
+        <span>Kacher</span>
+      </a>
+      <p>A focused Windows workspace for video, audio and live streams.</p>
+    </div>
+    <nav aria-label="Resources">
+      <strong>Resources</strong>
+      <a href="/help/desktop-login">Help</a>
+      <a href="/guides/save-your-own-video">Guides</a>
+      <a href="/changelog">Changelog</a>
+      <a href="/system-requirements">System requirements</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <nav aria-label="Legal">
+      <strong>Legal</strong>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/refund">Refund policy</a>
+    </nav>
+    <p class="copyright">© 2026 Kacher. All rights reserved.</p>
+  </footer>
+  <script src="/static/site.js?v=9b7d1e9426af" defer></script>
+</body>
+</html>

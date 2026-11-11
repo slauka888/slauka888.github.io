@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  
+  <meta name="robots" content="index,follow">
+  
+  <meta name="description" content="用 Kacher 录制已确认的直播或网络研讨会：从直播页面开始，保留已录部分，并先检查套餐的直播分钟。">
+  <link rel="canonical" href="https://slauka888.github.io/zh/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="en" href="https://slauka888.github.io/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="ru" href="https://slauka888.github.io/ru/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="de" href="https://slauka888.github.io/de/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="es" href="https://slauka888.github.io/es/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="zh" href="https://slauka888.github.io/zh/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="fr" href="https://slauka888.github.io/fr/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="ja" href="https://slauka888.github.io/ja/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="x-default" href="https://slauka888.github.io/guides/record-live-stream">
+  
+  <meta property="og:title" content="如何录制你自己的直播或网络研讨会 · Kacher">
+  <meta property="og:description" content="用 Kacher 录制已确认的直播或网络研讨会：从直播页面开始，保留已录部分，并先检查套餐的直播分钟。">
+  <meta property="og:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slauka888.github.io/zh/guides/record-live-stream">
+  <meta property="og:site_name" content="Kacher">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何录制你自己的直播或网络研讨会 · Kacher">
+  <meta name="twitter:description" content="用 Kacher 录制已确认的直播或网络研讨会：从直播页面开始，保留已录部分，并先检查套餐的直播分钟。">
+  <meta name="twitter:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <title>如何录制你自己的直播或网络研讨会 · Kacher</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"如何录制你自己的直播或网络研讨会","description":"用 Kacher 录制已确认的直播或网络研讨会：从直播页面开始，保留已录部分，并先检查套餐的直播分钟。","author":{"@type":"Organization","name":"Kacher","url":"https://slauka888.github.io"},"publisher":{"@type":"Organization","name":"Kacher","logo":{"@type":"ImageObject","url":"https://slauka888.github.io/static/brand/kacher-512.png?v=4afe9c90d845"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://slauka888.github.io/zh/guides/record-live-stream"},"datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"zh-CN","image":"https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kacher","item":"https://slauka888.github.io/zh/"},{"@type":"ListItem","position":2,"name":"如何录制你自己的直播或网络研讨会","item":"https://slauka888.github.io/zh/guides/record-live-stream"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"开始晚了会录到开头吗？","acceptedAnswer":{"@type":"Answer","text":"不会。直播录制从直播边缘开始，开始晚了可能会错过前面的部分。"}},{"@type":"Question","name":"点播录制走同样的路径吗？","acceptedAnswer":{"@type":"Answer","text":"不会。点播或普通视频应走正常分析和下载；只有已确认的直播才使用直播录制。"}},{"@type":"Question","name":"停止后会发生什么？","acceptedAnswer":{"@type":"Answer","text":"已录部分会作为可播放文件留在 Streams 文件夹里。那正是你要检查和归档的文件。"}}]}]}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/brand/kacher-32.png?v=74e2ca483221">
+  <link rel="apple-touch-icon" href="/static/brand/kacher-180.png?v=43005ce2af05">
+  <link rel="stylesheet" href="/static/site.css?v=5d103f4e8378">
+</head>
+<body data-surface="guide" data-cache-version="dfa2a95a28eb" data-sw-update-text="Kacher 新版本已准备好。方便时请刷新页面。">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="/zh/" aria-label="Kacher">
+      <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="38" height="38">
+      <span>Kacher</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#pricing">套餐</a>
+      <a href="/zh/download">下载</a>
+      <a href="/zh/help/desktop-login">帮助</a>
+    </nav>
+    <div class="header-actions">
+      <div class="desktop-locale"><nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/record-live-stream'>RU</a><a href='/guides/record-live-stream?lang=en'>EN</a><a href='/de/guides/record-live-stream'>DE</a><a href='/es/guides/record-live-stream'>ES</a><a href='/fr/guides/record-live-stream'>FR</a><a href='/ja/guides/record-live-stream'>日本語</a><a href='/zh/guides/record-live-stream' aria-current='true'>中文</a></nav></div>
+      
+        <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">登录</a>
+      
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="菜单">
+        <span aria-hidden="true">☰</span>
+        <span>菜单</span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <nav aria-label="主导航">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#pricing">套餐</a>
+          <a href="/zh/download">下载</a>
+          <a href="/zh/help/desktop-login">帮助</a>
+        </nav>
+        <nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/record-live-stream'>RU</a><a href='/guides/record-live-stream?lang=en'>EN</a><a href='/de/guides/record-live-stream'>DE</a><a href='/es/guides/record-live-stream'>ES</a><a href='/fr/guides/record-live-stream'>FR</a><a href='/ja/guides/record-live-stream'>日本語</a><a href='/zh/guides/record-live-stream' aria-current='true'>中文</a></nav>
+        
+          <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">登录</a>
+        
+      </div>
+    </details>
+  </header>
+
+  
+
+  <main id="main">
+    
+<section class="section guide-page">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+    <a href="/zh/">Kacher</a>
+    <span aria-hidden="true">/</span>
+    <a href="/zh/help/plans-limits">帮助</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">如何录制你自己的直播或网络研讨会</span>
+  </nav>
+  <div class="guide-layout">
+    <article class="guide-article">
+      <span class="eyebrow">直播录制</span>
+      <h1>如何录制你自己的直播或网络研讨会</h1>
+      <p class="guide-lead">使用 Kacher 录制你拥有或有权限录制的直播。应用会把已确认的直播地址与普通视频页面区别处理：边播放边录制，并把结果写入 Streams 文件夹。</p><p class="guide-lead">Kacher 不会在普通视频页面上录制看到的第一个流。如果普通视频页面里出现媒体片段，应用会走正常分析；只有已确认的直播来源才会被当作直播。</p>
+      <ol class="guide-steps">
+        
+          <li>
+            <h2>先检查套餐的直播分钟</h2>
+            <p>直播录制会消耗套餐配额，默认不是无限的。活动前打开套餐限制页，确认还剩下多少直播时间。</p>
+          </li>
+        
+          <li>
+            <h2>从直播页面开始</h2>
+            <p>粘贴直播地址，或从浏览器扩展发送所选的直播链接。Kacher 从直播边缘开始录制；如果需要开头，请提前启动。</p>
+          </li>
+        
+          <li>
+            <h2>在直播面板里观察</h2>
+            <p>直播面板会显示正在录制，并显示已下载大小，以及停止和保存按钮。</p>
+          </li>
+        
+          <li>
+            <h2>拿到需要的内容后停止</h2>
+            <p>使用停止结束本次录制。已录部分会作为可播放文件留在 Streams 文件夹里，可用于剪辑或归档。</p>
+          </li>
+        
+          <li>
+            <h2>关闭前检查文件</h2>
+            <p>打开录制文件，检查时长、音频和画面。停止后的直播录制应该是成品文件，而不是旁边留下一个 .part 文件。</p>
+          </li>
+        
+      </ol>
+      <div class="guide-checks">
+        <h2>完成前检查清单</h2>
+        <ul>
+          <li>套餐里还有直播分钟。</li><li>来源是已确认的直播，不是普通视频页面。</li><li>停止后 Streams 文件夹里有可播放文件。</li><li>你有权限录制并保留这场活动。</li>
+        </ul>
+      </div>
+      <div class="guide-faq">
+        <h2>安装前常见问题</h2>
+        
+          <details><summary>开始晚了会录到开头吗？</summary><p>不会。直播录制从直播边缘开始，开始晚了可能会错过前面的部分。</p></details>
+        
+          <details><summary>点播录制走同样的路径吗？</summary><p>不会。点播或普通视频应走正常分析和下载；只有已确认的直播才使用直播录制。</p></details>
+        
+          <details><summary>停止后会发生什么？</summary><p>已录部分会作为可播放文件留在 Streams 文件夹里。那正是你要检查和归档的文件。</p></details>
+        
+      </div>
+      <div class="guide-cta">
+        <a class="button button-primary" href="/zh/download" data-track="download_clicked">下载安装包</a>
+        <a class="button button-secondary" href="/zh/help/plans-limits">套餐限制</a>
+      </div>
+    </article>
+    <aside class="guide-related">
+      <h2>相关指南</h2>
+      
+        <a class="guide-card" href="/zh/guides/save-your-own-video">
+          <span>自己的内容 — 保存它</span>
+          <strong>如何保存你自己的视频或频道</strong>
+          <small>用 Kacher 保存你自己频道的视频或归档你的内容：粘贴页面、选择格式，并把校验通过的文件保留在你的电脑上。</small>
+        </a>
+      
+        <a class="guide-card" href="/zh/guides/choose-mp4-mkv-codecs">
+          <span>批量转码</span>
+          <strong>MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置</strong>
+          <small>选择能在需要的地方播放的输出：MP4 保兼容，MKV 讲灵活性，Kacher 里有 H.264/HEVC/AV1 和 remux。</small>
+        </a>
+      
+        <a class="guide-card" href="/zh/guides/troubleshoot-common-problems">
+          <span>故障排查</span>
+          <strong>Kacher 下不了：常见问题与解决办法</strong>
+          <small>按顺序解决下载不起、清晰度低于套餐、没声音、导出慢或许可证报错等问题。</small>
+        </a>
+      
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand brand-footer" href="/zh/">
+        <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="34" height="34">
+        <span>Kacher</span>
+      </a>
+      <p>专注于视频、音频和直播的 Windows 工作区。</p>
+    </div>
+    <nav aria-label="资源">
+      <strong>资源</strong>
+      <a href="/zh/help/desktop-login">帮助</a>
+      <a href="/zh/guides/save-your-own-video">指南</a>
+      <a href="/zh/changelog">更新日志</a>
+      <a href="/zh/system-requirements">系统要求</a>
+      <a href="/zh/contact">联系我们</a>
+    </nav>
+    <nav aria-label="法律信息">
+      <strong>法律信息</strong>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/zh/terms">使用条款</a>
+      <a href="/zh/refund">退款政策</a>
+    </nav>
+    <p class="copyright">© 2026 Kacher. 保留所有权利。</p>
+  </footer>
+  <script src="/static/site.js?v=9b7d1e9426af" defer></script>
+</body>
+</html>

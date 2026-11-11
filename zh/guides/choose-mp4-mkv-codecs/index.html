@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  
+  <meta name="robots" content="index,follow">
+  
+  <meta name="description" content="选择能在需要的地方播放的输出：MP4 保兼容，MKV 讲灵活性，Kacher 里有 H.264/HEVC/AV1 和 remux。">
+  <link rel="canonical" href="https://slauka888.github.io/zh/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="en" href="https://slauka888.github.io/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="ru" href="https://slauka888.github.io/ru/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="de" href="https://slauka888.github.io/de/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="es" href="https://slauka888.github.io/es/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="zh" href="https://slauka888.github.io/zh/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="fr" href="https://slauka888.github.io/fr/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="ja" href="https://slauka888.github.io/ja/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="x-default" href="https://slauka888.github.io/guides/choose-mp4-mkv-codecs">
+  
+  <meta property="og:title" content="MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置 · Kacher">
+  <meta property="og:description" content="选择能在需要的地方播放的输出：MP4 保兼容，MKV 讲灵活性，Kacher 里有 H.264/HEVC/AV1 和 remux。">
+  <meta property="og:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slauka888.github.io/zh/guides/choose-mp4-mkv-codecs">
+  <meta property="og:site_name" content="Kacher">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置 · Kacher">
+  <meta name="twitter:description" content="选择能在需要的地方播放的输出：MP4 保兼容，MKV 讲灵活性，Kacher 里有 H.264/HEVC/AV1 和 remux。">
+  <meta name="twitter:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <title>MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置 · Kacher</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置","description":"选择能在需要的地方播放的输出：MP4 保兼容，MKV 讲灵活性，Kacher 里有 H.264/HEVC/AV1 和 remux。","author":{"@type":"Organization","name":"Kacher","url":"https://slauka888.github.io"},"publisher":{"@type":"Organization","name":"Kacher","logo":{"@type":"ImageObject","url":"https://slauka888.github.io/static/brand/kacher-512.png?v=4afe9c90d845"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://slauka888.github.io/zh/guides/choose-mp4-mkv-codecs"},"datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"zh-CN","image":"https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kacher","item":"https://slauka888.github.io/zh/"},{"@type":"ListItem","position":2,"name":"MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置","item":"https://slauka888.github.io/zh/guides/choose-mp4-mkv-codecs"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么 FFV1 要用 MKV？","acceptedAnswer":{"@type":"Answer","text":"Kacher 把 FFV1 当归档选择，需要 MKV。换成别的容器不会静默回退到另一种编码。"}},{"@type":"Question","name":"GPU 编码器不存在怎么办？","acceptedAnswer":{"@type":"Answer","text":"用检查 GPU 和 Auto。如果 GPU 编码器不可用，Kacher 可以用 CPU：更慢，但在普通硬件上能跑。"}},{"@type":"Question","name":"什么时候 remux 就够了？","acceptedAnswer":{"@type":"Answer","text":"只有当已有流已经符合容器和播放目标时才够。它不能改尺寸、编码，也不能修音频。"}}]}]}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/brand/kacher-32.png?v=74e2ca483221">
+  <link rel="apple-touch-icon" href="/static/brand/kacher-180.png?v=43005ce2af05">
+  <link rel="stylesheet" href="/static/site.css?v=5d103f4e8378">
+</head>
+<body data-surface="guide" data-cache-version="dfa2a95a28eb" data-sw-update-text="Kacher 新版本已准备好。方便时请刷新页面。">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="/zh/" aria-label="Kacher">
+      <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="38" height="38">
+      <span>Kacher</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#pricing">套餐</a>
+      <a href="/zh/download">下载</a>
+      <a href="/zh/help/desktop-login">帮助</a>
+    </nav>
+    <div class="header-actions">
+      <div class="desktop-locale"><nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/choose-mp4-mkv-codecs'>RU</a><a href='/guides/choose-mp4-mkv-codecs?lang=en'>EN</a><a href='/de/guides/choose-mp4-mkv-codecs'>DE</a><a href='/es/guides/choose-mp4-mkv-codecs'>ES</a><a href='/fr/guides/choose-mp4-mkv-codecs'>FR</a><a href='/ja/guides/choose-mp4-mkv-codecs'>日本語</a><a href='/zh/guides/choose-mp4-mkv-codecs' aria-current='true'>中文</a></nav></div>
+      
+        <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">登录</a>
+      
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="菜单">
+        <span aria-hidden="true">☰</span>
+        <span>菜单</span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <nav aria-label="主导航">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#pricing">套餐</a>
+          <a href="/zh/download">下载</a>
+          <a href="/zh/help/desktop-login">帮助</a>
+        </nav>
+        <nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/choose-mp4-mkv-codecs'>RU</a><a href='/guides/choose-mp4-mkv-codecs?lang=en'>EN</a><a href='/de/guides/choose-mp4-mkv-codecs'>DE</a><a href='/es/guides/choose-mp4-mkv-codecs'>ES</a><a href='/fr/guides/choose-mp4-mkv-codecs'>FR</a><a href='/ja/guides/choose-mp4-mkv-codecs'>日本語</a><a href='/zh/guides/choose-mp4-mkv-codecs' aria-current='true'>中文</a></nav>
+        
+          <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">登录</a>
+        
+      </div>
+    </details>
+  </header>
+
+  
+
+  <main id="main">
+    
+<section class="section guide-page">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+    <a href="/zh/">Kacher</a>
+    <span aria-hidden="true">/</span>
+    <a href="/zh/help/plans-limits">帮助</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置</span>
+  </nav>
+  <div class="guide-layout">
+    <article class="guide-article">
+      <span class="eyebrow">批量转码</span>
+      <h1>MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置</h1>
+      <p class="guide-lead">容器是盒子，编码是压缩。MP4 通常最适合播放，MKV 则给高级音轨和归档编码留了更多空间。在 Kacher 里设置一个批量配置，并应用到文件列表。</p><p class="guide-lead">Kacher 会检查你的 FFmpeg 构建里有哪些编码器可用。有些 GPU 编码器可能不在这台机器上；这时应用会用 CPU，或提示所选 GPU 模式不可用。</p>
+      <ol class="guide-steps">
+        
+          <li>
+            <h2>先看最终播放位置</h2>
+            <p>要在常见播放器里广泛播放和剪辑，选 MP4。ProRes 或 DNxHR 剪辑用 MOV。FFV1 归档用 MKV。</p>
+          </li>
+        
+          <li>
+            <h2>按兼容、大小和用途选编码</h2>
+            <p>H.264 几乎到处都能播。HEVC/H.265 常更省空间，但需要较新的播放器。AV1 压缩更强，但更慢、兼容性更差。ProRes、DNxHR、FFV1 是剪辑和归档选择，不是日常播放格式。</p>
+          </li>
+        
+          <li>
+            <h2>不需要重新编码时才用 remux</h2>
+            <p>Remux 直接复制已有流，不重新编码。它对流本身快速无损，但不能改变尺寸、编码或修复音频。</p>
+          </li>
+        
+          <li>
+            <h2>一起设置容器、编码、分辨率和帧率</h2>
+            <p>即使改了纵横比，套餐的最大高度仍然是上限。大批量处理前检查输出分辨率、帧率和音频选项。</p>
+          </li>
+        
+          <li>
+            <h2>长任务前检查 GPU 路径</h2>
+            <p>用 Auto 或检查 GPU 看看 NVENC、AMF、QSV、MediaFoundation 哪些可用。如果 GPU 编码器失败，Kacher 会在下一次尝试时回退到 CPU；自定义模式会先用所选编码，再用兼容的备用。</p>
+          </li>
+        
+          <li>
+            <h2>先拿一个文件验证，再跑整个文件夹</h2>
+            <p>先拿一个文件做短测试，打开结果检查编码和时长。失败时 Kacher 还会在日志文件夹里保存失败日志。</p>
+          </li>
+        
+      </ol>
+      <div class="guide-checks">
+        <h2>完成前检查清单</h2>
+        <ul>
+          <li>容器支持所选编码。</li><li>HDR 来源会保留色彩标签；这不会把 SDR 变成 HDR。</li><li>需要改画面或编码时没有用 remux。</li><li>输出高度符合套餐限制。</li>
+        </ul>
+      </div>
+      <div class="guide-faq">
+        <h2>安装前常见问题</h2>
+        
+          <details><summary>为什么 FFV1 要用 MKV？</summary><p>Kacher 把 FFV1 当归档选择，需要 MKV。换成别的容器不会静默回退到另一种编码。</p></details>
+        
+          <details><summary>GPU 编码器不存在怎么办？</summary><p>用检查 GPU 和 Auto。如果 GPU 编码器不可用，Kacher 可以用 CPU：更慢，但在普通硬件上能跑。</p></details>
+        
+          <details><summary>什么时候 remux 就够了？</summary><p>只有当已有流已经符合容器和播放目标时才够。它不能改尺寸、编码，也不能修音频。</p></details>
+        
+      </div>
+      <div class="guide-cta">
+        <a class="button button-primary" href="/zh/download" data-track="download_clicked">下载安装包</a>
+        <a class="button button-secondary" href="/zh/help/plans-limits">套餐限制</a>
+      </div>
+    </article>
+    <aside class="guide-related">
+      <h2>相关指南</h2>
+      
+        <a class="guide-card" href="/zh/guides/save-your-own-video">
+          <span>自己的内容 — 保存它</span>
+          <strong>如何保存你自己的视频或频道</strong>
+          <small>用 Kacher 保存你自己频道的视频或归档你的内容：粘贴页面、选择格式，并把校验通过的文件保留在你的电脑上。</small>
+        </a>
+      
+        <a class="guide-card" href="/zh/guides/record-live-stream">
+          <span>直播录制</span>
+          <strong>如何录制你自己的直播或网络研讨会</strong>
+          <small>用 Kacher 录制已确认的直播或网络研讨会：从直播页面开始，保留已录部分，并先检查套餐的直播分钟。</small>
+        </a>
+      
+        <a class="guide-card" href="/zh/guides/troubleshoot-common-problems">
+          <span>故障排查</span>
+          <strong>Kacher 下不了：常见问题与解决办法</strong>
+          <small>按顺序解决下载不起、清晰度低于套餐、没声音、导出慢或许可证报错等问题。</small>
+        </a>
+      
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand brand-footer" href="/zh/">
+        <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="34" height="34">
+        <span>Kacher</span>
+      </a>
+      <p>专注于视频、音频和直播的 Windows 工作区。</p>
+    </div>
+    <nav aria-label="资源">
+      <strong>资源</strong>
+      <a href="/zh/help/desktop-login">帮助</a>
+      <a href="/zh/guides/save-your-own-video">指南</a>
+      <a href="/zh/changelog">更新日志</a>
+      <a href="/zh/system-requirements">系统要求</a>
+      <a href="/zh/contact">联系我们</a>
+    </nav>
+    <nav aria-label="法律信息">
+      <strong>法律信息</strong>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/zh/terms">使用条款</a>
+      <a href="/zh/refund">退款政策</a>
+    </nav>
+    <p class="copyright">© 2026 Kacher. 保留所有权利。</p>
+  </footer>
+  <script src="/static/site.js?v=9b7d1e9426af" defer></script>
+</body>
+</html>

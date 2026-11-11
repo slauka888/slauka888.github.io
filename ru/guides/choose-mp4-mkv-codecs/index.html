@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  
+  <meta name="robots" content="index,follow">
+  
+  <meta name="description" content="Выберите вывод, который проиграется там, где нужно: MP4 для совместимости, MKV для гибкости, H.264/HEVC/AV1 и remux в пакетном перекодировании Kacher.">
+  <link rel="canonical" href="https://slauka888.github.io/ru/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="en" href="https://slauka888.github.io/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="ru" href="https://slauka888.github.io/ru/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="de" href="https://slauka888.github.io/de/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="es" href="https://slauka888.github.io/es/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="zh" href="https://slauka888.github.io/zh/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="fr" href="https://slauka888.github.io/fr/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="ja" href="https://slauka888.github.io/ja/guides/choose-mp4-mkv-codecs">
+  
+  <link rel="alternate" hreflang="x-default" href="https://slauka888.github.io/guides/choose-mp4-mkv-codecs">
+  
+  <meta property="og:title" content="MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода · Kacher">
+  <meta property="og:description" content="Выберите вывод, который проиграется там, где нужно: MP4 для совместимости, MKV для гибкости, H.264/HEVC/AV1 и remux в пакетном перекодировании Kacher.">
+  <meta property="og:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slauka888.github.io/ru/guides/choose-mp4-mkv-codecs">
+  <meta property="og:site_name" content="Kacher">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="ja_JP"><meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода · Kacher">
+  <meta name="twitter:description" content="Выберите вывод, который проиграется там, где нужно: MP4 для совместимости, MKV для гибкости, H.264/HEVC/AV1 и remux в пакетном перекодировании Kacher.">
+  <meta name="twitter:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <title>MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода · Kacher</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода","description":"Выберите вывод, который проиграется там, где нужно: MP4 для совместимости, MKV для гибкости, H.264/HEVC/AV1 и remux в пакетном перекодировании Kacher.","author":{"@type":"Organization","name":"Kacher","url":"https://slauka888.github.io"},"publisher":{"@type":"Organization","name":"Kacher","logo":{"@type":"ImageObject","url":"https://slauka888.github.io/static/brand/kacher-512.png?v=4afe9c90d845"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://slauka888.github.io/ru/guides/choose-mp4-mkv-codecs"},"datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ru","image":"https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kacher","item":"https://slauka888.github.io/ru/"},{"@type":"ListItem","position":2,"name":"MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода","item":"https://slauka888.github.io/ru/guides/choose-mp4-mkv-codecs"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему Kacher просит MKV для FFV1?","acceptedAnswer":{"@type":"Answer","text":"FFV1 в Kacher считается архивным выбором и требует MKV. Выбор не-MKV контейнера не фолбэчится молча на другой кодек."}},{"@type":"Question","name":"Что делать, если GPU-энкодер отсутствует?","acceptedAnswer":{"@type":"Answer","text":"Используйте «Проверить GPU» и Auto. Если GPU-энкодера нет, Kacher может использовать CPU — медленнее, но работает на обычном железе."}},{"@type":"Question","name":"Когда достаточно remux?","acceptedAnswer":{"@type":"Answer","text":"Remux достаточно только когда существующие потоки уже подходят под контейнер и цель воспроизведения. Он не меняет размер, кодек и не чинит звук."}}]}]}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/brand/kacher-32.png?v=74e2ca483221">
+  <link rel="apple-touch-icon" href="/static/brand/kacher-180.png?v=43005ce2af05">
+  <link rel="stylesheet" href="/static/site.css?v=5d103f4e8378">
+</head>
+<body data-surface="guide" data-cache-version="dfa2a95a28eb" data-sw-update-text="Свежая версия Kacher готова. Обновите страницу, когда удобно.">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <a class="brand" href="/ru/" aria-label="Kacher">
+      <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="38" height="38">
+      <span>Kacher</span>
+    </a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="/ru/#features">Возможности</a>
+      <a href="/ru/#pricing">Тарифы</a>
+      <a href="/ru/download">Скачать</a>
+      <a href="/ru/help/desktop-login">Помощь</a>
+    </nav>
+    <div class="header-actions">
+      <div class="desktop-locale"><nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/choose-mp4-mkv-codecs' aria-current='true'>RU</a><a href='/guides/choose-mp4-mkv-codecs?lang=en'>EN</a><a href='/de/guides/choose-mp4-mkv-codecs'>DE</a><a href='/es/guides/choose-mp4-mkv-codecs'>ES</a><a href='/fr/guides/choose-mp4-mkv-codecs'>FR</a><a href='/ja/guides/choose-mp4-mkv-codecs'>日本語</a><a href='/zh/guides/choose-mp4-mkv-codecs'>中文</a></nav></div>
+      
+        <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">Войти</a>
+      
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="Меню">
+        <span aria-hidden="true">☰</span>
+        <span>Меню</span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <nav aria-label="Основная навигация">
+          <a href="/ru/#features">Возможности</a>
+          <a href="/ru/#pricing">Тарифы</a>
+          <a href="/ru/download">Скачать</a>
+          <a href="/ru/help/desktop-login">Помощь</a>
+        </nav>
+        <nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/choose-mp4-mkv-codecs' aria-current='true'>RU</a><a href='/guides/choose-mp4-mkv-codecs?lang=en'>EN</a><a href='/de/guides/choose-mp4-mkv-codecs'>DE</a><a href='/es/guides/choose-mp4-mkv-codecs'>ES</a><a href='/fr/guides/choose-mp4-mkv-codecs'>FR</a><a href='/ja/guides/choose-mp4-mkv-codecs'>日本語</a><a href='/zh/guides/choose-mp4-mkv-codecs'>中文</a></nav>
+        
+          <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">Войти</a>
+        
+      </div>
+    </details>
+  </header>
+
+  
+
+  <main id="main">
+    
+<section class="section guide-page">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+    <a href="/ru/">Kacher</a>
+    <span aria-hidden="true">/</span>
+    <a href="/ru/help/plans-limits">Помощь</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода</span>
+  </nav>
+  <div class="guide-layout">
+    <article class="guide-article">
+      <span class="eyebrow">Массовое перекодирование</span>
+      <h1>MP4, MKV, H.264, HEVC, AV1 и remux: как выбрать настройки вывода</h1>
+      <p class="guide-lead">Контейнер — это коробка, а кодек — сжатие. MP4 обычно безопаснее для воспроизведения, а MKV даёт больше места для продвинутых дорожек и архивных кодеков. В Kacher вы задаёте один профиль пакета и применяете его к списку файлов.</p><p class="guide-lead">Kacher проверяет, какие энкодеры доступны в вашей сборке FFmpeg. Часть GPU-энкодеров может отсутствовать на вашей системе; тогда приложение использует CPU или сообщает, что выбранный GPU-режим недоступен.</p>
+      <ol class="guide-steps">
+        
+          <li>
+            <h2>Начните с места воспроизведения</h2>
+            <p>Для широкого воспроизведения и монтажа в обычных плеерах берите MP4. Для монтажа в ProRes или DNxHR естественный контейнер — MOV. Для архива в FFV1 используйте MKV.</p>
+          </li>
+        
+          <li>
+            <h2>Выберите кодек по совместимости, размеру и назначению</h2>
+            <p>H.264 играет почти везде. HEVC/H.265 часто занимает меньше места, но требует более новый плеер. AV1 может сжимать сильнее, но медленнее и менее универсален. ProRes, DNxHR и FFV1 — выбор для монтажа и архива, а не для повседневного просмотра.</p>
+          </li>
+        
+          <li>
+            <h2>Используйте remux, когда не нужен новый энкод</h2>
+            <p>Remux копирует существующие потоки без перекодирования. Это быстро и без потерь для самих потоков, но не меняет разрешение, кодек и звук.</p>
+          </li>
+        
+          <li>
+            <h2>Задайте контейнер, кодек, разрешение и fps вместе</h2>
+            <p>Максимальная высота по тарифу остаётся потолком даже при выборе более высокого соотношения сторон. Перед большой папкой проверьте выходное разрешение, частоту кадров и аудио-настройки.</p>
+          </li>
+        
+          <li>
+            <h2>Проверьте GPU-путь перед длинной задачей</h2>
+            <p>Используйте Auto или «Проверить GPU», чтобы увидеть доступные энкодеры NVENC, AMF, QSV или MediaFoundation. Если выбранный GPU-энкодер падает, Kacher может перейти на CPU для следующей попытки; в пользовательском режиме он сначала берёт выбранный кодек, затем совместимый фолбэк.</p>
+          </li>
+        
+          <li>
+            <h2>Проверьте один файл перед всей папкой</h2>
+            <p>Прогоните короткий тест на одном файле, откройте результат и проверьте кодек и длительность. При ошибке Kacher также хранит логи падений в своей папке логов.</p>
+          </li>
+        
+      </ol>
+      <div class="guide-checks">
+        <h2>Что проверить перед завершением</h2>
+        <ul>
+          <li>Контейнер поддерживает выбранный кодек.</li><li>HDR-источники сохраняют цветовые теги; это не создаёт HDR из SDR-источника.</li><li>Remux не использован там, где нужно менять картинку или кодек.</li><li>Выходная высота соблюдает лимит тарифа.</li>
+        </ul>
+      </div>
+      <div class="guide-faq">
+        <h2>Что важно знать до установки</h2>
+        
+          <details><summary>Почему Kacher просит MKV для FFV1?</summary><p>FFV1 в Kacher считается архивным выбором и требует MKV. Выбор не-MKV контейнера не фолбэчится молча на другой кодек.</p></details>
+        
+          <details><summary>Что делать, если GPU-энкодер отсутствует?</summary><p>Используйте «Проверить GPU» и Auto. Если GPU-энкодера нет, Kacher может использовать CPU — медленнее, но работает на обычном железе.</p></details>
+        
+          <details><summary>Когда достаточно remux?</summary><p>Remux достаточно только когда существующие потоки уже подходят под контейнер и цель воспроизведения. Он не меняет размер, кодек и не чинит звук.</p></details>
+        
+      </div>
+      <div class="guide-cta">
+        <a class="button button-primary" href="/ru/download" data-track="download_clicked">Скачать установщик</a>
+        <a class="button button-secondary" href="/ru/help/plans-limits">Лимиты тарифов</a>
+      </div>
+    </article>
+    <aside class="guide-related">
+      <h2>Связанные гайды</h2>
+      
+        <a class="guide-card" href="/ru/guides/save-your-own-video">
+          <span>Свой контент — сохраните его</span>
+          <strong>Как сохранить своё видео или канал</strong>
+          <small>Сохраните видео со своего канала или заархивируйте свой контент в Kacher: вставьте страницу, выберите формат и оставьте проверенный файл на своём ПК.</small>
+        </a>
+      
+        <a class="guide-card" href="/ru/guides/record-live-stream">
+          <span>Запись эфиров</span>
+          <strong>Как записать свой прямой эфир или вебинар</strong>
+          <small>Запишите подтверждённый прямой эфир или вебинар в Kacher: начните с живой страницы, сохраните частичную запись и сначала проверьте минуты стрима по тарифу.</small>
+        </a>
+      
+        <a class="guide-card" href="/ru/guides/troubleshoot-common-problems">
+          <span>Диагностика проблем</span>
+          <strong>Kacher не качает: частые проблемы и решения</strong>
+          <small>Исправьте загрузку, которая не стартует, качество ниже тарифа, отсутствующий звук, медленный экспорт или ошибку лицензии — проверяйте вероятные причины по порядку.</small>
+        </a>
+      
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand brand-footer" href="/ru/">
+        <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="34" height="34">
+        <span>Kacher</span>
+      </a>
+      <p>Сосредоточенное Windows-пространство для видео, аудио и прямых эфиров.</p>
+    </div>
+    <nav aria-label="Материалы">
+      <strong>Материалы</strong>
+      <a href="/ru/help/desktop-login">Помощь</a>
+      <a href="/ru/guides/save-your-own-video">Гайды</a>
+      <a href="/ru/changelog">История изменений</a>
+      <a href="/ru/system-requirements">Системные требования</a>
+      <a href="/ru/contact">Контакты</a>
+    </nav>
+    <nav aria-label="Документы">
+      <strong>Документы</strong>
+      <a href="/ru/privacy">Конфиденциальность</a>
+      <a href="/ru/terms">Условия использования</a>
+      <a href="/ru/refund">Возвраты</a>
+    </nav>
+    <p class="copyright">© 2026 Kacher. Все права защищены.</p>
+  </footer>
+  <script src="/static/site.js?v=9b7d1e9426af" defer></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  
+  <meta name="robots" content="index,follow">
+  
+  <meta name="description" content="按顺序解决下载不起、清晰度低于套餐、没声音、导出慢或许可证报错等问题。">
+  <link rel="canonical" href="https://slauka888.github.io/zh/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="en" href="https://slauka888.github.io/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="ru" href="https://slauka888.github.io/ru/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="de" href="https://slauka888.github.io/de/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="es" href="https://slauka888.github.io/es/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="zh" href="https://slauka888.github.io/zh/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="fr" href="https://slauka888.github.io/fr/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="ja" href="https://slauka888.github.io/ja/guides/troubleshoot-common-problems">
+  
+  <link rel="alternate" hreflang="x-default" href="https://slauka888.github.io/guides/troubleshoot-common-problems">
+  
+  <meta property="og:title" content="Kacher 下不了：常见问题与解决办法 · Kacher">
+  <meta property="og:description" content="按顺序解决下载不起、清晰度低于套餐、没声音、导出慢或许可证报错等问题。">
+  <meta property="og:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slauka888.github.io/zh/guides/troubleshoot-common-problems">
+  <meta property="og:site_name" content="Kacher">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kacher 下不了：常见问题与解决办法 · Kacher">
+  <meta name="twitter:description" content="按顺序解决下载不起、清晰度低于套餐、没声音、导出慢或许可证报错等问题。">
+  <meta name="twitter:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <title>Kacher 下不了：常见问题与解决办法 · Kacher</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Kacher 下不了：常见问题与解决办法","description":"按顺序解决下载不起、清晰度低于套餐、没声音、导出慢或许可证报错等问题。","author":{"@type":"Organization","name":"Kacher","url":"https://slauka888.github.io"},"publisher":{"@type":"Organization","name":"Kacher","logo":{"@type":"ImageObject","url":"https://slauka888.github.io/static/brand/kacher-512.png?v=4afe9c90d845"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://slauka888.github.io/zh/guides/troubleshoot-common-problems"},"datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"zh-CN","image":"https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kacher","item":"https://slauka888.github.io/zh/"},{"@type":"ListItem","position":2,"name":"Kacher 下不了：常见问题与解决办法","item":"https://slauka888.github.io/zh/guides/troubleshoot-common-problems"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"403 或找不到怎么办？","acceptedAnswer":{"@type":"Answer","text":"刷新 cookies，更新 yt-dlp/FFmpeg 后重新分析。还不行时，来源可能不公开或不能保存。"}},{"@type":"Question","name":"为什么没声音？","acceptedAnswer":{"@type":"Answer","text":"常常是选了一个只有视频的格式。换容器或编码，选带音频轨的格式。"}},{"@type":"Question","name":"为什么导出慢？","acceptedAnswer":{"@type":"Answer","text":"GPU 编码器、分辨率、编码和码率都会影响速度。检查 GPU，用 Auto，并先拿一个短文件试。"}}]}]}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/brand/kacher-32.png?v=74e2ca483221">
+  <link rel="apple-touch-icon" href="/static/brand/kacher-180.png?v=43005ce2af05">
+  <link rel="stylesheet" href="/static/site.css?v=5d103f4e8378">
+</head>
+<body data-surface="guide" data-cache-version="dfa2a95a28eb" data-sw-update-text="Kacher 新版本已准备好。方便时请刷新页面。">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="brand" href="/zh/" aria-label="Kacher">
+      <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="38" height="38">
+      <span>Kacher</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#pricing">套餐</a>
+      <a href="/zh/download">下载</a>
+      <a href="/zh/help/desktop-login">帮助</a>
+    </nav>
+    <div class="header-actions">
+      <div class="desktop-locale"><nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/troubleshoot-common-problems'>RU</a><a href='/guides/troubleshoot-common-problems?lang=en'>EN</a><a href='/de/guides/troubleshoot-common-problems'>DE</a><a href='/es/guides/troubleshoot-common-problems'>ES</a><a href='/fr/guides/troubleshoot-common-problems'>FR</a><a href='/ja/guides/troubleshoot-common-problems'>日本語</a><a href='/zh/guides/troubleshoot-common-problems' aria-current='true'>中文</a></nav></div>
+      
+        <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">登录</a>
+      
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="菜单">
+        <span aria-hidden="true">☰</span>
+        <span>菜单</span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <nav aria-label="主导航">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#pricing">套餐</a>
+          <a href="/zh/download">下载</a>
+          <a href="/zh/help/desktop-login">帮助</a>
+        </nav>
+        <nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/troubleshoot-common-problems'>RU</a><a href='/guides/troubleshoot-common-problems?lang=en'>EN</a><a href='/de/guides/troubleshoot-common-problems'>DE</a><a href='/es/guides/troubleshoot-common-problems'>ES</a><a href='/fr/guides/troubleshoot-common-problems'>FR</a><a href='/ja/guides/troubleshoot-common-problems'>日本語</a><a href='/zh/guides/troubleshoot-common-problems' aria-current='true'>中文</a></nav>
+        
+          <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">登录</a>
+        
+      </div>
+    </details>
+  </header>
+
+  
+
+  <main id="main">
+    
+<section class="section guide-page">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+    <a href="/zh/">Kacher</a>
+    <span aria-hidden="true">/</span>
+    <a href="/zh/help/plans-limits">帮助</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Kacher 下不了：常见问题与解决办法</span>
+  </nav>
+  <div class="guide-layout">
+    <article class="guide-article">
+      <span class="eyebrow">故障排查</span>
+      <h1>Kacher 下不了：常见问题与解决办法</h1>
+      <p class="guide-lead">按最可能的顺序排查：文件与格式、账号或 cookies、连接与代理，最后再看性能。找到第一个真办法就停，不用全改一遍。</p><p class="guide-lead">Kacher 不绕过 DRM 或访问限制。如果内容不公开或不能保存，请使用来源导出或已授权的下载。</p>
+      <ol class="guide-steps">
+        
+          <li>
+            <h2>先分清症状</h2>
+            <p>没有格式列表、找不到、清晰度被拦、没声音、导出慢、许可证报错是不同的分支。不要一次重装所有东西。</p>
+          </li>
+        
+          <li>
+            <h2>检查链接和格式</h2>
+            <p>自己打开页面确认能加载。如果提示找不到或没有合适格式，用页面规范地址，不要用内部 CDN/HLS 地址。直接录流只用于已确认的直播来源。</p>
+          </li>
+        
+          <li>
+            <h2>检查 cookies、yt-dlp 和落盘</h2>
+            <p>cookies 过期就用扩展刷新。403 或格式缺失时先更新 yt-dlp 和 FFmpeg，再重新分析。Kacher 只有在真实输出文件存在时才把任务标为完成。</p>
+          </li>
+        
+          <li>
+            <h2>检查连接和代理</h2>
+            <p>传输错误时打开设置 → 代理，用 Test all 或 Blitz。确认当前代理是活的。直连也失败时，可能是站点被你的服务商封了。</p>
+          </li>
+        
+          <li>
+            <h2>把套餐、清晰度、音频、性能分开看</h2>
+            <p>格式被套餐拦就降清晰度。只有没声音时换容器或编码，选带音频轨的格式。导出慢时用 Auto GPU 或 CPU，并检查码率配置和分辨率。</p>
+          </li>
+        
+          <li>
+            <h2>留住失败证据</h2>
+            <p>保存报错、套餐、版本和 Kacher 日志文件夹里的日志。绝不要发送密码、私钥或完整支付信息。</p>
+          </li>
+        
+      </ol>
+      <div class="guide-checks">
+        <h2>完成前检查清单</h2>
+        <ul>
+          <li>页面自己能打开。</li><li>所选清晰度在套餐限制内。</li><li>输出文件存在，且不是 .part。</li><li>来源和保存权限都清楚。</li>
+        </ul>
+      </div>
+      <div class="guide-faq">
+        <h2>安装前常见问题</h2>
+        
+          <details><summary>403 或找不到怎么办？</summary><p>刷新 cookies，更新 yt-dlp/FFmpeg 后重新分析。还不行时，来源可能不公开或不能保存。</p></details>
+        
+          <details><summary>为什么没声音？</summary><p>常常是选了一个只有视频的格式。换容器或编码，选带音频轨的格式。</p></details>
+        
+          <details><summary>为什么导出慢？</summary><p>GPU 编码器、分辨率、编码和码率都会影响速度。检查 GPU，用 Auto，并先拿一个短文件试。</p></details>
+        
+      </div>
+      <div class="guide-cta">
+        <a class="button button-primary" href="/zh/download" data-track="download_clicked">下载安装包</a>
+        <a class="button button-secondary" href="/zh/help/plans-limits">套餐限制</a>
+      </div>
+    </article>
+    <aside class="guide-related">
+      <h2>相关指南</h2>
+      
+        <a class="guide-card" href="/zh/guides/save-your-own-video">
+          <span>自己的内容 — 保存它</span>
+          <strong>如何保存你自己的视频或频道</strong>
+          <small>用 Kacher 保存你自己频道的视频或归档你的内容：粘贴页面、选择格式，并把校验通过的文件保留在你的电脑上。</small>
+        </a>
+      
+        <a class="guide-card" href="/zh/guides/record-live-stream">
+          <span>直播录制</span>
+          <strong>如何录制你自己的直播或网络研讨会</strong>
+          <small>用 Kacher 录制已确认的直播或网络研讨会：从直播页面开始，保留已录部分，并先检查套餐的直播分钟。</small>
+        </a>
+      
+        <a class="guide-card" href="/zh/guides/choose-mp4-mkv-codecs">
+          <span>批量转码</span>
+          <strong>MP4、MKV、H.264、HEVC、AV1 和 remux：如何选择输出设置</strong>
+          <small>选择能在需要的地方播放的输出：MP4 保兼容，MKV 讲灵活性，Kacher 里有 H.264/HEVC/AV1 和 remux。</small>
+        </a>
+      
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand brand-footer" href="/zh/">
+        <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="34" height="34">
+        <span>Kacher</span>
+      </a>
+      <p>专注于视频、音频和直播的 Windows 工作区。</p>
+    </div>
+    <nav aria-label="资源">
+      <strong>资源</strong>
+      <a href="/zh/help/desktop-login">帮助</a>
+      <a href="/zh/guides/save-your-own-video">指南</a>
+      <a href="/zh/changelog">更新日志</a>
+      <a href="/zh/system-requirements">系统要求</a>
+      <a href="/zh/contact">联系我们</a>
+    </nav>
+    <nav aria-label="法律信息">
+      <strong>法律信息</strong>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/zh/terms">使用条款</a>
+      <a href="/zh/refund">退款政策</a>
+    </nav>
+    <p class="copyright">© 2026 Kacher. 保留所有权利。</p>
+  </footer>
+  <script src="/static/site.js?v=9b7d1e9426af" defer></script>
+</body>
+</html>

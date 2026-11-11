@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060912">
+  
+  <meta name="robots" content="index,follow">
+  
+  <meta name="description" content="Kacherで確認済みライブ配信やウェビナーを録画：ライブページから開始し、部分録画を残し、まずプランの配信時間を確認します。">
+  <link rel="canonical" href="https://slauka888.github.io/ja/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="en" href="https://slauka888.github.io/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="ru" href="https://slauka888.github.io/ru/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="de" href="https://slauka888.github.io/de/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="es" href="https://slauka888.github.io/es/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="zh" href="https://slauka888.github.io/zh/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="fr" href="https://slauka888.github.io/fr/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="ja" href="https://slauka888.github.io/ja/guides/record-live-stream">
+  
+  <link rel="alternate" hreflang="x-default" href="https://slauka888.github.io/guides/record-live-stream">
+  
+  <meta property="og:title" content="自分のライブ配信やウェビナーを録画する方法 · Kacher">
+  <meta property="og:description" content="Kacherで確認済みライブ配信やウェビナーを録画：ライブページから開始し、部分録画を残し、まずプランの配信時間を確認します。">
+  <meta property="og:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slauka888.github.io/ja/guides/record-live-stream">
+  <meta property="og:site_name" content="Kacher">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="ru_RU"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="自分のライブ配信やウェビナーを録画する方法 · Kacher">
+  <meta name="twitter:description" content="Kacherで確認済みライブ配信やウェビナーを録画：ライブページから開始し、部分録画を残し、まずプランの配信時間を確認します。">
+  <meta name="twitter:image" content="https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c">
+  <title>自分のライブ配信やウェビナーを録画する方法 · Kacher</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"自分のライブ配信やウェビナーを録画する方法","description":"Kacherで確認済みライブ配信やウェビナーを録画：ライブページから開始し、部分録画を残し、まずプランの配信時間を確認します。","author":{"@type":"Organization","name":"Kacher","url":"https://slauka888.github.io"},"publisher":{"@type":"Organization","name":"Kacher","logo":{"@type":"ImageObject","url":"https://slauka888.github.io/static/brand/kacher-512.png?v=4afe9c90d845"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://slauka888.github.io/ja/guides/record-live-stream"},"datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","image":"https://slauka888.github.io/static/brand/kacher-og.png?v=c3a8e979f72c"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kacher","item":"https://slauka888.github.io/ja/"},{"@type":"ListItem","position":2,"name":"自分のライブ配信やウェビナーを録画する方法","item":"https://slauka888.github.io/ja/guides/record-live-stream"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"遅く開始しても冒頭は録れますか？","acceptedAnswer":{"@type":"Answer","text":"録れません。ライブ録画はライブエッジから始まるので、遅い開始では冒頭を逃すことがあります。"}},{"@type":"Question","name":"VOD録画も同じ経路ですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。VODや通常動画は通常の分析とダウンロードで処理し、ライブレコーダーは確認済みライブ配信だけに使います。"}},{"@type":"Question","name":"停止したらどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"既に録画された部分はStreamsフォルダに再生可能なファイルとして残ります。そのファイルを確かめてアーカイブしてください。"}}]}]}</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/brand/kacher-32.png?v=74e2ca483221">
+  <link rel="apple-touch-icon" href="/static/brand/kacher-180.png?v=43005ce2af05">
+  <link rel="stylesheet" href="/static/site.css?v=5d103f4e8378">
+</head>
+<body data-surface="guide" data-cache-version="dfa2a95a28eb" data-sw-update-text="Kacherの新しいバージョンが準備できました。都合の良い時に更新してください。">
+  <a class="skip-link" href="#main">コンテンツへスキップ</a>
+  <header class="site-header">
+    <a class="brand" href="/ja/" aria-label="Kacher">
+      <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="38" height="38">
+      <span>Kacher</span>
+    </a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="/ja/#features">機能</a>
+      <a href="/ja/#pricing">料金</a>
+      <a href="/ja/download">ダウンロード</a>
+      <a href="/ja/help/desktop-login">ヘルプ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="desktop-locale"><nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/record-live-stream'>RU</a><a href='/guides/record-live-stream?lang=en'>EN</a><a href='/de/guides/record-live-stream'>DE</a><a href='/es/guides/record-live-stream'>ES</a><a href='/fr/guides/record-live-stream'>FR</a><a href='/ja/guides/record-live-stream' aria-current='true'>日本語</a><a href='/zh/guides/record-live-stream'>中文</a></nav></div>
+      
+        <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">サインイン</a>
+      
+    </div>
+    <details class="mobile-menu">
+      <summary aria-label="メニュー">
+        <span aria-hidden="true">☰</span>
+        <span>メニュー</span>
+      </summary>
+      <div class="mobile-menu-panel">
+        <nav aria-label="メインナビゲーション">
+          <a href="/ja/#features">機能</a>
+          <a href="/ja/#pricing">料金</a>
+          <a href="/ja/download">ダウンロード</a>
+          <a href="/ja/help/desktop-login">ヘルプ</a>
+        </nav>
+        <nav class='kacher-language-switcher' aria-label='Language'><a href='/ru/guides/record-live-stream'>RU</a><a href='/guides/record-live-stream?lang=en'>EN</a><a href='/de/guides/record-live-stream'>DE</a><a href='/es/guides/record-live-stream'>ES</a><a href='/fr/guides/record-live-stream'>FR</a><a href='/ja/guides/record-live-stream' aria-current='true'>日本語</a><a href='/zh/guides/record-live-stream'>中文</a></nav>
+        
+          <a class="button button-primary button-small" href="https://slauka.pythonanywhere.com/auth/login">サインイン</a>
+        
+      </div>
+    </details>
+  </header>
+
+  
+
+  <main id="main">
+    
+<section class="section guide-page">
+  <nav class="guide-breadcrumb" aria-label="Breadcrumb">
+    <a href="/ja/">Kacher</a>
+    <span aria-hidden="true">/</span>
+    <a href="/ja/help/plans-limits">ヘルプ</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">自分のライブ配信やウェビナーを録画する方法</span>
+  </nav>
+  <div class="guide-layout">
+    <article class="guide-article">
+      <span class="eyebrow">ライブ録画</span>
+      <h1>自分のライブ配信やウェビナーを録画する方法</h1>
+      <p class="guide-lead">自分が所有している、または録画許可がある配信にKacherを使います。アプリは確認済みライブアドレスを通常の動画ページとは別に扱います。再生しながら録画し、結果をStreamsフォルダに書き込みます。</p><p class="guide-lead">Kacherは通常の動画ページで見た最初のストリームを録画しません。通常の動画ページ内にメディアフラグメントが現れた場合は分析に進み、拡張機能から送られたリンクも、確認済みライブソースの場合だけライブとして扱われます。</p>
+      <ol class="guide-steps">
+        
+          <li>
+            <h2>まずプランの配信時間を確認する</h2>
+            <p>ライブ録画はプランのクォータを使い、デフォルトで無制限ではありません。イベント前にプラン制限ページを開き、残り時間を確認してください。</p>
+          </li>
+        
+          <li>
+            <h2>ライブページから開始する</h2>
+            <p>ライブアドレスを貼り付けるか、ブラウザ拡張機能から選んだストリームリンクを送ります。Kacherはライブエッジから録画するので、冒頭が必要なら早めに開始します。</p>
+          </li>
+        
+          <li>
+            <h2>ストリームパネルで見守る</h2>
+            <p>ストリームパネルで録画中であることがわかります。ダウンロード済みサイズや、ライブ録画用の停止・保存ボタンも表示されます。</p>
+          </li>
+        
+          <li>
+            <h2>必要なところで止める</h2>
+            <p>停止でセッションを終了します。既に録画された部分はStreamsフォルダに再生可能なファイルとして残り、編集やアーカイブに使えます。</p>
+          </li>
+        
+          <li>
+            <h2>Kacherを閉じる前にファイルを確認する</h2>
+            <p>録画ファイルを開き、長さ、音、映像を確認します。停止したライブ録画は、横に.partが残るのではなく、完成したファイルとして残るはずです。</p>
+          </li>
+        
+      </ol>
+      <div class="guide-checks">
+        <h2>完了前に確認すること</h2>
+        <ul>
+          <li>プランに配信時間が残っていること。</li><li>ソースが確認済みライブ配信で、通常の動画ページでないこと。</li><li>停止後にStreamsフォルダに再生可能なファイルがあること。</li><li>イベントを録画して保持する許可があること。</li>
+        </ul>
+      </div>
+      <div class="guide-faq">
+        <h2>インストール前の質問</h2>
+        
+          <details><summary>遅く開始しても冒頭は録れますか？</summary><p>録れません。ライブ録画はライブエッジから始まるので、遅い開始では冒頭を逃すことがあります。</p></details>
+        
+          <details><summary>VOD録画も同じ経路ですか？</summary><p>いいえ。VODや通常動画は通常の分析とダウンロードで処理し、ライブレコーダーは確認済みライブ配信だけに使います。</p></details>
+        
+          <details><summary>停止したらどうなりますか？</summary><p>既に録画された部分はStreamsフォルダに再生可能なファイルとして残ります。そのファイルを確かめてアーカイブしてください。</p></details>
+        
+      </div>
+      <div class="guide-cta">
+        <a class="button button-primary" href="/ja/download" data-track="download_clicked">インストーラーをダウンロード</a>
+        <a class="button button-secondary" href="/ja/help/plans-limits">プラン制限</a>
+      </div>
+    </article>
+    <aside class="guide-related">
+      <h2>関連ガイド</h2>
+      
+        <a class="guide-card" href="/ja/guides/save-your-own-video">
+          <span>自分のコンテンツを保存しよう</span>
+          <strong>自分の動画やチャンネルを保存する方法</strong>
+          <small>Kacherで自分のチャンネルの動画を保存したり、自分のコンテンツをアーカイブしたり：ページを貼り付けて形式を選び、確認済みのファイルをPCに残します。</small>
+        </a>
+      
+        <a class="guide-card" href="/ja/guides/choose-mp4-mkv-codecs">
+          <span>一括変換</span>
+          <strong>MP4、MKV、H.264、HEVC、AV1、remux：出力設定の選び方</strong>
+          <small>必要な場所で再生できる出力を選びましょう：互換性はMP4、柔軟性はMKV、Kacherの一括変換でH.264/HEVC/AV1とremux。</small>
+        </a>
+      
+        <a class="guide-card" href="/ja/guides/troubleshoot-common-problems">
+          <span>トラブルシューティング</span>
+          <strong>Kacherでダウンロードできない：よくある問題と解決</strong>
+          <small>ダウンロードが始まらない、画質がプランより低い、音が出ない、書き出しが遅い、ライセンスエラーなどを正しい順番で直します。</small>
+        </a>
+      
+    </aside>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand brand-footer" href="/ja/">
+        <img src="/static/brand/kacher-mark.png?v=ccd210b61469" alt="" width="34" height="34">
+        <span>Kacher</span>
+      </a>
+      <p>動画、音声、ライブストリームに特化したWindowsワークスペース。</p>
+    </div>
+    <nav aria-label="リソース">
+      <strong>リソース</strong>
+      <a href="/ja/help/desktop-login">ヘルプ</a>
+      <a href="/ja/guides/save-your-own-video">ガイド</a>
+      <a href="/ja/changelog">変更履歴</a>
+      <a href="/ja/system-requirements">システム要件</a>
+      <a href="/ja/contact">お問い合わせ</a>
+    </nav>
+    <nav aria-label="法的情報">
+      <strong>法的情報</strong>
+      <a href="/ja/privacy">プライバシー</a>
+      <a href="/ja/terms">利用規約</a>
+      <a href="/ja/refund">返金ポリシー</a>
+    </nav>
+    <p class="copyright">© 2026 Kacher. All rights reserved.</p>
+  </footer>
+  <script src="/static/site.js?v=9b7d1e9426af" defer></script>
+</body>
+</html>
